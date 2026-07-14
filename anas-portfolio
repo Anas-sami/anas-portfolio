@@ -342,12 +342,12 @@
 
             <!-- Quick Link Buttons -->
             <div class="social-buttons">
-                <!-- LinkedIn Redirect -->
+                <!-- LinkedIn Redirect (CORRECTED URL) -->
                 <a href="https://www.linkedin.com/in/anas-sami-alharthi" target="_blank" class="btn-link">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
                 </a>
 
-                <!-- GitHub Redirect -->
+                <!-- GitHub Redirect (CORRECTED URL) -->
                 <a href="https://github.com/Anas-sami" target="_blank" class="btn-link">
                     <i class="fa-brands fa-github"></i> GitHub Repositories
                 </a>
