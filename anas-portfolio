@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Sami | Computer Science & AI Track Leader</title>
+
+    <!-- Premium Google Fonts for modern clean tech styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables - Clean & Premium Handcrafted Palette */
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: #1f2937;
+            --accent-color: #60a5fa; /* Modern soft blue */
+            --accent-hover: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #374151;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'Fira Code', monospace;
+            --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Clean Minimalist Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-mono);
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color var(--transition-smooth);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero / Bio Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .hero-tag {
+            font-family: var(--font-mono);
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            text-align: justify;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+        }
+
+        .btn-link:hover {
+            background-color: var(--bg-card);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Structured Sections */
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        /* Accolades / Certificates Grid */
+        .accolades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .accolade-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all var(--transition-smooth);
+        }
+
+        .accolade-card:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .card-header-icon {
+            font-size: 1.75rem;
+            color: var(--accent-color);
+            margin-bottom: 1.25rem;
+        }
+
+        .cert-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .cert-issuer {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cert-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-badge {
+            align-self: flex-start;
+            background-color: rgba(96, 165, 250, 0.08);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            color: var(--accent-color);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+        }
+
+        /* Quick Interactive JavaScript Terminal-like area */
+        .tech-terminal {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .terminal-text {
+            color: var(--text-muted);
+        }
+
+        .terminal-text span {
+            color: #34d399; /* Success Green */
+        }
+
+        .terminal-btn {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-weight: 500;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: opacity var(--transition-smooth);
+        }
+
+        .terminal-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer with explicit Creator Credits */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: var(--bg-primary);
+        }
+
+        .footer-credits {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-credits span {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* Mobile Layout Optimizations */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplifies layout for raw hand-crafted feel */
+            }
+            .hero-title {
+                font-size: 2.25rem;
+            }
+            .hero-description {
+                font-size: 1.1rem;
+            }
+            .social-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">Anas Sami</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Bio</a></li>
+                <li><a href="#accolades">Accolades</a></li>
+                <li><a href="mailto:anas.sami.alharthi@gmail.com">Direct Inquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Profile Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">System Terminal // Live</span>
+            <h1 class="hero-title">Anas Sami</h1>
+            <!-- Your raw, untouched personal bio -->
+            <p class="hero-description">
+                Fourth-year Computer Science student who always invested in development. AI Track Leader at the Programming and AI Club (PAIC) at the university. What I’m passionate about is applying technology in different domains, such as solving complex problems, also having hands on experience in web applications development and building machine learning models utilizing TensorFlow and Keras. I am highly proficient in data analysis using Python (NumPy, Pandas, Jupyter) and relational database design (SQL), alongside a strong grasp of Cloud Computing and modern development frameworks and tools (React, Flask, Git, Docker, DevOps) to build agile and scalable environments.
+            </p>
+
+            <!-- Quick Link Buttons -->
+            <div class="social-buttons">
+                <!-- LinkedIn Redirect -->
+                <a href="https://www.linkedin.com/in/anas-sami-alharthi" target="_blank" class="btn-link">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                </a>
+
+                <!-- GitHub Redirect -->
+                <a href="https://github.com/Anas-sami" target="_blank" class="btn-link">
+                    <i class="fa-brands fa-github"></i> GitHub Repositories
+                </a>
+
+                <!-- Email Redirect -->
+                <a href="mailto:anas.sami.alharthi@gmail.com" class="btn-link">
+                    <i class="fa-regular fa-envelope"></i> Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accolades / Certified Credentials Section -->
+    <section id="accolades" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Professional Accolades</h2>
+        </div>
+
+        <div class="accolades-grid">
+            <!-- Accolade 1: SDAIA -->
+            <div class="accolade-card">
+                <div>
+                    <div class="card-header-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="cert-title">Fundamentals of Artificial Intelligence</h3>
+                    <span class="cert-issuer">SDAIA (Saudi Data & AI Authority)</span>
+                    <p class="cert-meta">Completed under the national SDAIA initiative to train one million Saudis in Artificial Intelligence.</p>
+                </div>
+                <div class="cert-badge">Verified Credential</div>
+            </div>
+
+            <!-- Accolade 2: Smart Methods DevOps -->
+            <div class="accolade-card">
+                <div>
+                    <div class="card-header-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3 class="cert-title">DevOps Fundamentals</h3>
+                    <span class="cert-issuer">Smart Methods (R&D Center)</span>
+                    <p class="cert-meta">Completed intensive training session focused on Git version control systems and collaborative DevOps mechanics.</p>
+                </div>
+                <div class="cert-badge">Verified Credential</div>
+            </div>
+
+            <!-- Accolade 3: International Academy -->
+            <div class="accolade-card">
+                <div>
+                    <div class="card-header-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="cert-title">Computer Skills & InfoSec Course</h3>
+                    <span class="cert-issuer">International Academy for Training</span>
+                    <p class="cert-meta">6-month comprehensive study spanning 360 professional credit hours, completed with a perfect score.</p>
+                </div>
+                <div class="cert-badge">Verified Credential</div>
+            </div>
+        </div>
+
+        <!-- Interactive JavaScript Widget -->
+        <div class="tech-terminal">
+            <span class="terminal-text">anas@sami:~$ <span id="status-line">system_check --active</span></span>
+            <button class="terminal-btn" onclick="pingStatus()">Execute Diagnostic</button>
+        </div>
+    </section>
+
+    <!-- Footer with Explicit Creator Credit -->
+    <footer>
+        <div class="footer-credits">
+            <p>Designed and Built by <span>Anas Sami Al-Harthi</span> © 2026</p>
+        </div>
+    </footer>
+
+    <!-- Live JS logic for active responsiveness -->
+    <script>
+        function pingStatus() {
+            const statusLine = document.getElementById('status-line');
+            statusLine.style.color = '#fbbf24'; // Amber Warning
+            statusLine.innerText = 'pinging_server_networks...';
+
+            setTimeout(() => {
+                statusLine.style.color = '#34d399'; // Success Green
+                statusLine.innerText = 'all_systems_operational (0ms latency)';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
